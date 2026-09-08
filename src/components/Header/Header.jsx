@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import './Header.css'
 import { FaSun, FaMoon, FaBars, FaXmark } from "react-icons/fa6"
 
@@ -34,25 +35,25 @@ function Header() {
                     onClick={alternarMenu}
                     aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
                 >
-                    {menuAberto ? <FaXmark /> : <FaBars />}
+                    {menuAberto ? <FaXmark aria-hidden="true" /> : <FaBars aria-hidden="true" />}
                 </button>
 
                 <div className={`menu ${menuAberto ? "menu-aberto" : ""}`}>
                     <ul>
-                        <li>Home</li>
-                        <li>Doar</li>
-                        <li>Seja Voluntario</li>
-                        <li>Campanhas</li>
-                        <li>Historias</li>
+                        <li><Link to="/" onClick={() => setMenuAberto(false)}>Home</Link></li>
+                        <li><Link to="/doacao" onClick={() => setMenuAberto(false)}>Doar</Link></li>
+                        <li className="em-breve">Seja Voluntario</li>
+                        <li className="em-breve">Campanhas</li>
+                        <li className="em-breve">Historias</li>
                     </ul>
                     <button
                         className="tema-toggle"
                         onClick={alternarTema}
                         aria-label="Alternar tema claro/escuro"
                     >
-                        {tema === "light" ? <FaMoon /> : <FaSun />}
+                        {tema === "light" ? <FaMoon aria-hidden="true" /> : <FaSun aria-hidden="true" />}
                     </button>
-                    <button>Entrar</button>
+                    <Link to="/login" className="btn-entrar" onClick={() => setMenuAberto(false)}>Entrar</Link>
                 </div>
             </div>
         </div>

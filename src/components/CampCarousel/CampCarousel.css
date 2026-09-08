@@ -90,77 +90,7 @@
     overflow: hidden;
 }
 
-.carousel-imagens img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.carousel-item {
-    width: 350px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    border: 2px var(--cinza-texto) solid;
-    border-radius: 5px;
-    background-color: var(--bg-card);
-}
-
-.carousel-text {
-    width: 80%;
-    display: flex;
-    margin: 10px 0 10px 0;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-bottom: 2px var(--verde-principal) solid;
-}
-
-.carousel-text strong {
-    color: var(--verde-principal);
-}
-
-.carousel-local {
-    margin: 10px 0 10px 0;
-    margin-top: auto;
-    display: flex;
-}
-
-.carousel-local svg {
-    color: var(--verde-principal);
-}
-
-.calendario {
-    width: 8rem;
-    height: 3rem;
-    background-color: var(--verde-claro);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.625rem;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.calendario svg {
-    color: var(--verde-principal);
-}
-
-.calendario p {
-    color: var(--cinza-texto);
-}
-
 @media (max-width: 1024px) {
-    .carousel-item {
-        width: 280px;
-    }
-
-    .carousel-imagens img {
-        height: 170px;
-    }
-
     .anterior {
         left: -1.25rem;
     }
@@ -173,10 +103,6 @@
 @media (max-width: 640px) {
     .carousel-container {
         width: 90%;
-    }
-
-    .carousel-item {
-        width: min(320px, 100%);
     }
 
     .anterior,

@@ -50,6 +50,10 @@
     width: clamp(8rem, 20vw, 12.5rem);
     height: 2.5rem;
     color: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .hero-escolha .doar:hover {

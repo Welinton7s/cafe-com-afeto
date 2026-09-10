@@ -57,7 +57,7 @@ function Carousel() {
     const offsets = Array.from({ length: cardsVisiveis }, (_, i) => i)
 
     return (
-        <div className="carousel">
+        <section className="carousel">
 
             <div className="carousel-container">
 
@@ -97,7 +97,7 @@ function Carousel() {
 
             </div>
 
-        </div>
+        </section>
     )
 }
 

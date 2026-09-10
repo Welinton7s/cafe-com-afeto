@@ -3,7 +3,7 @@ import './CampaignCard.css'
 
 function CampaignCard({ campanha }) {
     return (
-        <div className="carousel-item">
+        <article className="carousel-item">
             <img
                 src={campanha.imagem}
                 alt={campanha.altText}
@@ -21,7 +21,7 @@ function CampaignCard({ campanha }) {
                 <FaRegCalendar aria-hidden="true" />
                 <p>{campanha.data}</p>
             </div>
-        </div>
+        </article>
     )
 }
 

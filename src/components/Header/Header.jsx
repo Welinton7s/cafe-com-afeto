@@ -24,7 +24,7 @@ function Header() {
     }
 
     return (
-        <div className="header">
+        <header className="header">
             <div className="container">
                 <div className="logo">
                     <strong>Café com Afeto</strong>
@@ -56,7 +56,7 @@ function Header() {
                     <Link to="/login" className="btn-entrar" onClick={() => setMenuAberto(false)}>Entrar</Link>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 

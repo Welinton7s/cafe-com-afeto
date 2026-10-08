@@ -1,0 +1,122 @@
+.carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    position: relative;
+    background-color: var(--bg-secao);
+}
+
+.carousel-container {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.carousel-header {
+    text-align: center;
+}
+
+.carousel-header h2 {
+    font-size: 2rem;
+    color: var(--texto-titulo);
+    margin-bottom: 0.5rem;
+}
+
+.carousel-header p {
+    font-size: 1rem;
+    color: var(--cinza-texto);
+}
+
+.carousel-slider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    position: relative;
+}
+
+.anterior,
+.proximo {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--verde-principal);
+    color: var(--branco);
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.anterior {
+    left: -3rem;
+}
+
+.proximo {
+    right: -3rem;
+}
+
+.anterior:hover,
+.proximo:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-imagens {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.625rem;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .anterior {
+        left: -1.25rem;
+    }
+
+    .proximo {
+        right: -1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .carousel-container {
+        width: 90%;
+    }
+
+    .anterior,
+    .proximo {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.85rem;
+    }
+
+    .anterior {
+        left: 0.25rem;
+    }
+
+    .proximo {
+        right: 0.25rem;
+    }
+}
